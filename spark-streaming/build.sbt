@@ -3,11 +3,7 @@ lazy val root = (project in file("."))
       name := "track-streaming",
       scalaVersion := "2.11.7",
       libraryDependencies ++= Seq(
-        "org.apache.spark" % "spark-streaming_2.11" % "2.2.0",
-        "org.apache.spark" % "spark-streaming-kafka-0-10_2.11" % "2.2.0",
-        "com.typesafe.akka" %% "akka-actor" % "2.5.6",
-        "com.enragedginger" %% "akka-quartz-scheduler" % "1.6.0-akka-2.4.x",
-        "com.typesafe.akka" %% "akka-testkit" % "2.5.6" % Test
+        "org.apache.spark" % "spark-streaming_2.11" % "2.2.0"
       )
     )
 
