@@ -8,7 +8,7 @@ object Main {
 
   def main(args: Array[String]): Unit = {
 
-    // scはspark-shellを起動時に生成されるSparkContext(入力データ)のこと.
+    // sscはspark-shellを起動時に生成されるSparkContext(入力データ)のこと.
     // Spark Streamingでは入力ストリームデータを定義する必要がある
     // 今回は10秒毎にバッチ処理
     // spark-shellの場合, SparkContextはsc変数で予め生成されている
