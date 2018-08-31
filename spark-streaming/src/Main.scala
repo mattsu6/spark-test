@@ -1,14 +1,8 @@
 package jp.microad.track.streaming
 
-import akka.actor.{Actor, ActorSystem, Props}
-import com.typesafe.akka.extension.quartz.QuartzSchedulerExtension
-import org.apache.kafka.common.serialization.StringDeserializer
 import org.apache.spark.SparkConf
+import org.apache.spark.storage.StorageLevel
 import org.apache.spark.streaming.{Seconds, StreamingContext}
-import org.apache.spark.streaming.kafka010._
-import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
-import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
-import org.apache.spark.streaming.kafka010.KafkaUtils
 
 object Main {
 
@@ -40,11 +34,3 @@ object Main {
     ssc.awaitTermination()
   }
 }
-
-class HelloActor extends Actor {
-
-  override def receive: Receive = {
-    case _ => println("hello")
-  }
-}
-
